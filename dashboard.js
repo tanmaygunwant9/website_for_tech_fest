@@ -1,4 +1,4 @@
-// Chart.js Example
+
 const ctx = document.getElementById('myChart').getContext('2d');
 new Chart(ctx, {
   type: 'line',
@@ -20,7 +20,7 @@ new Chart(ctx, {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Homepage button redirect
+
   const homepageBtn = document.getElementById('btn-homepage');
   if (homepageBtn) {
     homepageBtn.addEventListener('click', function() {
@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Profile window logic
   const profileIcon = document.getElementById('dashboard-profile-icon');
   const profileWindow = document.getElementById('profile-window');
   const closeProfileBtn = document.getElementById('close-profile-btn');
@@ -53,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Load profile info from localStorage
   const profile = JSON.parse(localStorage.getItem('profile'));
   if (profile) {
     document.getElementById('profile-name').textContent = profile.name;
@@ -64,4 +62,5 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('profile-location').textContent = profile.location || 'Not set';
     document.getElementById('profile-skills').textContent = profile.skills ? profile.skills.join(', ') : 'Not set';
   }
+
 });
