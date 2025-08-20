@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const signupLink = document.querySelector('.login-footer a');
   signupLink.addEventListener('click', function(e) {
     e.preventDefault();
-    window.location.href = 'main.html';
+    window.location.href = 'index.html';
   });
 });
 
@@ -134,7 +134,7 @@ window.onload = function() {
           group.classList.remove('success', 'error');
         });
         updateProgress();
-        window.location.href = 'main.html';
+        window.location.href = 'index.html';
       }, 1200);
     } else {
      
@@ -147,4 +147,5 @@ window.onload = function() {
   
   updateProgress();
 };
+
 
