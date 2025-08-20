@@ -317,7 +317,7 @@ function initializeEventListeners() {
 
   if (getStartedBtn) {
     getStartedBtn.addEventListener('click', () => {
-      showNotification('Getting started with InteractiveApp...', 'success');
+      
     });
   }
 
@@ -601,4 +601,5 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   }
 });
+
 
