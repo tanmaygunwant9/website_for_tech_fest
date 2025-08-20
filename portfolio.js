@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalDesc = document.getElementById("modalDesc");
   const closeModal = document.getElementById("closeModal");
 
-  // Open modal when card is clicked
   cards.forEach(card => {
     card.addEventListener("click", () => {
       modalTitle.textContent = card.dataset.title;
@@ -14,19 +13,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Close modal
   closeModal.addEventListener("click", () => {
     modal.classList.add("hidden");
   });
 
-  // Close modal when clicking outside the content
   modal.addEventListener("click", (e) => {
     if (e.target === modal) {
       modal.classList.add("hidden");
     }
   });
 
-  // Profile icon logic
   const profileIcon = document.querySelector('.profile-avatar');
   const profileWindow = document.getElementById('profile-window');
   const closeProfileBtn = document.getElementById('close-profile-btn');
@@ -51,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Load profile info from localStorage
   const profile = JSON.parse(localStorage.getItem('profile'));
   if (profile) {
     document.getElementById('profile-name').textContent = profile.name || '';
@@ -65,3 +60,4 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('profile-joined').textContent = localStorage.getItem('profileJoined') || '';
   }
 });
+
