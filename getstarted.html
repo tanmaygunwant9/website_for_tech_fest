@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Started - InteractiveApp</title>
+  <link rel="stylesheet" href="getstarted.css" />
+</head>
+<body>
+  <nav class="getstarted-navbar">
+    <button id="home-btn" class="btn-home">🏠 Homepage</button>
+  </nav>
+  <main class="getstarted-main">
+    <section class="intro-section">
+      <!-- Fill your intro content here -->
+    </section>
+    <section class="features-section">
+      <!-- Fill your features content here -->
+    </section>
+    <section class="steps-section">
+      <!-- Fill your steps/process content here -->
+    </section>
+    <section class="team-section">
+      <!-- Fill your team content here -->
+    </section>
+    <section class="cta-section">
+      <!-- Fill your call-to-action content here -->
+    </section>
+    <section class="products-section">
+      <h2>Order a Product</h2>
+      <form id="orderForm">
+        <label for="productSelect">Choose a product:</label>
+        <select id="productSelect">
+          <option value="">-- Select --</option>
+          <option value="Website Design">Website Design</option>
+          <option value="Mobile App">Mobile App</option>
+          <option value="SEO Package">SEO Package</option>
+          <option value="Cloud Hosting">Cloud Hosting</option>
+        </select>
+        <button type="submit" class="btn-order" disabled>Order</button>
+      </form>
+      <div id="productDetails"></div>
+      <div id="orderMsg"></div>
+      <h3>Available Products</h3>
+      <ul id="productsList"></ul>
+    </section>
+  </main>
+  <script src="getstarted.js"></script>
+</body>
+</html>

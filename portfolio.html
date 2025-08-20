@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio - InteractiveApp</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="portfolio.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <div class="logo-icon">TG</div>
+        <span class="logo-text">NIRAVANA</span>
+      </div>
+
+      <ul class="nav-menu" id="nav-menu">
+      <li class="nav-item">
+        <a href="main.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="services.html" class="nav-link">Events</a>
+      </li>
+      <li class="nav-item">
+        <a href="portfolio.html" class="nav-link active">Gallery</a>
+      </li>
+      <li class="nav-item">
+        <a href="contact.html" class="nav-link">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a href="dashboard.html" target="_blank" class="nav-link">Dashboard</a>
+      </li>
+    </ul>
+
+      <div class="nav-actions">
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Search everything..." />
+          <i class="fas fa-search search-icon"></i>
+        </div>
+        <div class="theme-toggle" id="theme-toggle">
+          <i class="fas fa-moon"></i>
+        </div>
+        <div class="notification-bell">
+          <i class="fas fa-bell"></i>
+          <span class="notification-badge">3</span>
+        </div>
+        <div class="profile-avatar">
+          <i class="fas fa-user"></i>
+        </div>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio">
+    <h1>Our Gallery...</h1>
+    <p>Take a glimpse at some of our events.</p>
+
+    <div class="portfolio-grid">
+      <!-- Project Cards -->
+      <div class="card" data-title="Hackathon" data-desc="Modern Hackathon with brilliant Real Life Problems to Solve.">
+        <img src="1.jpg" alt="Hackathon">
+        <h3>Hackathon</h3>
+      </div>
+
+      <div class="card" data-title="Stalls" data-desc="Variety of Stalls managed By teachers as well as Students..">
+        <img src="2.jpg" alt="Stalls">
+        <h3>Stalls</h3>
+      </div>
+
+      <div class="card" data-title="Price Distribution" data-desc="An e-commerce platform with secure payments and interactive UI.">
+        <img src="3.jpg" alt="Price Distribution">
+        <h3>Price Distribution</h3>
+      </div>
+
+      <div class="card" data-title="Coding Competition" data-desc="Competative Pragramming Rounds to Enhance Skills of other Students..">
+        <img src="1.webp" alt="Coding Competition">
+        <h3>Coding Competition</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="projectModal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+
+  <!-- Profile Window -->
+  <div id="profile-window" class="profile-window hidden">
+    <div class="profile-header">
+      <div class="profile-avatar-large">
+        <i class="fas fa-user-circle"></i>
+      </div>
+      <h3 id="profile-name"></h3>
+      <p class="profile-role">Member</p>
+      <p class="profile-bio" id="profile-bio"></p>
+    </div>
+    <div class="profile-details">
+      <div class="profile-detail-row">
+        <i class="fas fa-envelope"></i>
+        <span><strong>Email:</strong> <span id="profile-email"></span></span>
+      </div>
+      <div class="profile-detail-row">
+        <i class="fas fa-phone"></i>
+        <span><strong>Phone:</strong> <span id="profile-phone"></span></span>
+      </div>
+      <div class="profile-detail-row">
+        <i class="fas fa-map-marker-alt"></i>
+        <span><strong>Location:</strong> <span id="profile-location"></span></span>
+      </div>
+      <div class="profile-detail-row">
+        <i class="fas fa-lightbulb"></i>
+        <span><strong>Skills:</strong> <span id="profile-skills"></span></span>
+      </div>
+      <div class="profile-detail-row">
+        <i class="fas fa-calendar-alt"></i>
+        <span><strong>Joined:</strong> <span id="profile-joined"></span></span>
+      </div>
+    </div>
+    <button class="btn btn-secondary close-profile-btn" id="close-profile-btn">
+      <i class="fas fa-times"></i> Close
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="portfolio.js"></script>
+</body>
+</html>

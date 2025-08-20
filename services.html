@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InteractiveApp - Event Participation</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="services.css" />
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <div class="logo-icon">IA</div>
+        <span class="logo-text">InteractiveApp</span>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item">
+          <a href="main.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="services.html" class="nav-link active">Event Participation</a>
+        </li>
+        <li class="nav-item">
+          <a href="portfolio.html" class="nav-link">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a href="dashboard.html" target="_blank" class="nav-link">Dashboard</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="services" id="services-page">
+    <div class="services-container">
+      <h1 class="services-title">Participate in Our Events</h1>
+      <p class="services-subtitle">
+        Join our exciting tech events! Register below to participate in any of the upcoming competitions and fests.
+      </p>
+
+      <div class="events-grid">
+        <div class="event-card">
+          <i class="fas fa-laptop-code service-icon"></i>
+          <h3>Hackathon</h3>
+          <p>Showcase your coding skills and creativity in our 24-hour hackathon challenge.</p>
+        </div>
+        <div class="event-card">
+          <i class="fas fa-robot service-icon"></i>
+          <h3>Tech Fest</h3>
+          <p>Explore the latest in technology, attend workshops, and network with industry leaders.</p>
+        </div>
+        <div class="event-card">
+          <i class="fas fa-keyboard service-icon"></i>
+          <h3>Coding Competition</h3>
+          <p>Compete with the best minds in algorithmic and problem-solving contests.</p>
+        </div>
+        <div class="event-card">
+          <i class="fas fa-lightbulb service-icon"></i>
+          <h3>Innovation Expo</h3>
+          <p>Present your innovative projects and ideas to a panel of experts and investors.</p>
+        </div>
+        <div class="event-card">
+          <i class="fas fa-gamepad service-icon"></i>
+          <h3>Game Jam</h3>
+          <p>Collaborate and build fun games in a limited time with fellow enthusiasts.</p>
+        </div>
+      </div>
+
+      <form class="event-form" id="eventForm" novalidate>
+        <h2>Event Participation Form</h2>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required />
+          <span class="error-message" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          <span class="error-message" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="event">Select Event</label>
+          <select id="event" name="event" required>
+            <option value="" disabled selected>-- Choose an Event --</option>
+            <option value="hackathon">Hackathon</option>
+            <option value="techfest">Tech Fest</option>
+            <option value="coding">Coding Competition</option>
+            <option value="expo">Innovation Expo</option>
+            <option value="gamejam">Game Jam</option>
+          </select>
+          <span class="error-message" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Why do you want to participate?</label>
+          <textarea id="message" name="message" rows="4" placeholder="Share your motivation..." required></textarea>
+          <span class="error-message" aria-live="polite"></span>
+        </div>
+
+        <button type="submit" class="btn-submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 InteractiveApp. All rights reserved.</p>
+  </footer>
+
+  <script src="services.js"></script>
+</body>
+</html>

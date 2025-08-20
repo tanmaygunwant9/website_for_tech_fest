@@ -1,0 +1,266 @@
+/* ===== CSS VARIABLES (borrowed from portfolio.css) ===== */
+:root {
+  --primary-color: #2dd4bf;
+  --primary-dark: #14b8a6;
+  --secondary-color: #64748b;
+  --accent-color: #f59e0b;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-light: #9ca3af;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-card: #ffffff;
+  --border-color: #e5e7eb;
+  --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-heavy: 0 20px 25px rgba(0, 0, 0, 0.1);
+  --border-radius: 12px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Dark Theme Variables (optional) */
+[data-theme='dark'] {
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --text-light: #9ca3af;
+  --bg-primary: #111827;
+  --bg-secondary: #1f2937;
+  --bg-card: #374151;
+  --border-color: #4b5563;
+  --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-heavy: 0 20px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: var(--font-primary);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  margin: 0;
+  transition: var(--transition);
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--bg-card);
+  box-shadow: var(--shadow-light);
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links li {
+  display: inline;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--primary-color);
+}
+
+/* ===== ABOUT SECTION ===== */
+.about {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-heavy);
+  transition: var(--transition);
+}
+.about h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+.about p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+/* ===== BUTTON STYLE ===== */
+#learnMoreBtn {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--primary-color);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#learnMoreBtn:hover {
+  background: var(--primary-dark);
+}
+
+/* ===== HIDDEN CONTENT ===== */
+.hidden {
+  display: none;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #ecfeff;
+  border-left: 4px solid var(--primary-color);
+  border-radius: 8px;
+}
+
+/* ===== MEMBERS SECTION ===== */
+.members {
+  margin-top: 40px;
+  text-align: center;
+}
+.members-list {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+.member-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0,201,167,0.08);
+  padding: 18px 16px;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.member-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.10);
+}
+.member-card h3 {
+  margin: 8px 0 4px 0;
+  font-size: 1.08rem;
+  color: #2563eb;
+}
+.member-card p {
+  margin: 0;
+  color: #00c9a7;
+  font-size: 0.98rem;
+}
+
+/* ===== TEAM SECTION ===== */
+.team-section {
+  margin: 56px auto 0 auto;
+  text-align: center;
+}
+.team-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 32px;
+}
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+.team-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,201,167,0.10), 0 2px 8px rgba(37,99,235,0.07);
+  padding: 32px 24px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+.team-card:hover {
+  box-shadow: 0 16px 40px rgba(0,201,167,0.16), 0 4px 16px rgba(37,99,235,0.12);
+}
+.team-avatar {
+  background: #2dd4bf;
+  color: #fff;
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin-bottom: 18px;
+}
+.team-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+.team-role {
+  color: #2dd4bf;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.team-desc {
+  color: #64748b;
+  font-size: 0.98rem;
+  margin-bottom: 18px;
+}
+.team-social {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+.team-social a {
+  color: #64748b;
+  font-size: 1.15rem;
+  transition: color 0.2s;
+}
+.team-social a:hover {
+  color: #2dd4bf;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 900px) {
+  .about {
+    max-width: 96vw;
+    padding: 1.2rem;
+  }
+  .about h1 {
+    font-size: 1.5rem;
+  }
+  .team-list {
+    gap: 18px;
+  }
+  .team-card {
+    width: 98vw;
+    max-width: 340px;
+    padding: 24px 10px;
+  }
+}
+@media (max-width: 600px) {
+  .team-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 480px) {
+  .about {
+    margin: 40px auto;
+    padding: 0.6rem;
+  }
+  .about h1 {
+    font-size: 1.1rem;
+  }
+}
