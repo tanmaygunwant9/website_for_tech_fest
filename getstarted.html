@@ -3,49 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get Started - InteractiveApp</title>
-  <link rel="stylesheet" href="getstarted.css" />
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="signup.css" />
 </head>
 <body>
-  <nav class="getstarted-navbar">
-    <button id="home-btn" class="btn-home">🏠 Homepage</button>
-  </nav>
-  <main class="getstarted-main">
-    <section class="intro-section">
-   
-    </section>
-    <section class="features-section">
-   
-    </section>
-    <section class="steps-section">
-   
-    </section>
-    <section class="team-section">
-   
-    </section>
-    <section class="cta-section">
-   
-    </section>
-    <section class="products-section">
-      <h2>Order a Product</h2>
-      <form id="orderForm">
-        <label for="productSelect">Choose a product:</label>
-        <select id="productSelect">
-          <option value="">-- Select --</option>
-          <option value="Website Design">Website Design</option>
-          <option value="Mobile App">Mobile App</option>
-          <option value="SEO Package">SEO Package</option>
-          <option value="Cloud Hosting">Cloud Hosting</option>
-        </select>
-        <button type="submit" class="btn-order" disabled>Order</button>
-      </form>
-      <div id="productDetails"></div>
-      <div id="orderMsg"></div>
-      <h3>Available Products</h3>
-      <ul id="productsList"></ul>
-    </section>
-  </main>
-  <script src="getstarted.js"></script>
+  <div class="login-container">
+    <div class="progress-indicator">
+      <div class="progress-dot active"></div>
+      <div class="progress-dot"></div>
+      <div class="progress-dot"></div>
+    </div>
+    <h2>Create Your Account</h2>
+    <form id="signupForm" novalidate>
+      <div class="form-container">
+        <div class="form-left">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <div class="input-wrapper">
+              <input type="text" id="name" name="name" required placeholder="Your Full Name" />
+              <span class="input-icon">👤</span>
+              <span class="success-icon">✓</span>
+            </div>
+            <div class="error-message" id="nameError">Please enter your full name.</div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <div class="input-wrapper">
+              <input type="email" id="email" name="email" required placeholder="you@example.com" />
+              <span class="input-icon">📧</span>
+              <span class="success-icon">✓</span>
+            </div>
+            <div class="error-message" id="emailError">Please enter a valid email address.</div>
+          </div>
+          <div class="form-group">
+            <label for="bio">Short Bio</label>
+            <div class="input-wrapper">
+              <input type="text" id="bio" name="bio" placeholder="Tell us about yourself" />
+              <span class="input-icon">📝</span>
+              <span class="success-icon">✓</span>
+            </div>
+          </div>
+        </div>
+        <div class="form-right">
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <div class="input-wrapper">
+              <input type="text" id="phone" name="phone" placeholder="Your phone number" />
+              <span class="input-icon">📱</span>
+              <span class="success-icon">✓</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="location">Location</label>
+            <div class="input-wrapper">
+              <input type="text" id="location" name="location" placeholder="Your city, country" />
+              <span class="input-icon">📍</span>
+              <span class="success-icon">✓</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="skills">Skills</label>
+            <div class="input-wrapper">
+              <input type="text" id="skills" name="skills" placeholder="e.g., JavaScript, CSS, React" />
+              <span class="input-icon">⚡</span>
+              <span class="success-icon">✓</span>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn-login">Create Account</button>
+      </div>
+    </form>
+  </div>
+  <script src="signup.js"></script>
 </body>
-
 </html>
