@@ -2,7 +2,7 @@ document.getElementById('home-btn').onclick = function() {
   window.location.href = 'main.html';
 };
 
-// Product data with descriptions and prices
+
 const products = [
   {
     name: "Website Design",
@@ -37,7 +37,7 @@ const orderMsg = document.getElementById('orderMsg');
 const productDetails = document.getElementById('productDetails');
 const btnOrder = orderForm.querySelector('.btn-order');
 
-// Show product details when selected
+
 productSelect.addEventListener('change', function() {
   const selected = productSelect.value;
   if (!selected) {
@@ -55,7 +55,7 @@ productSelect.addEventListener('change', function() {
   btnOrder.disabled = false;
 });
 
-// Handle order submission
+
 orderForm.addEventListener('submit', function(e) {
   e.preventDefault();
   const selected = productSelect.value;
@@ -70,4 +70,5 @@ orderForm.addEventListener('submit', function(e) {
   productDetails.style.display = 'none';
   btnOrder.disabled = true;
   setTimeout(() => orderMsg.textContent = "", 2500);
+
 });
