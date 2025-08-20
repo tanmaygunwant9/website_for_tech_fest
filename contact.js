@@ -3,13 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const successMsg = document.getElementById("successMsg");
 
   contactForm.addEventListener("submit", function (e) {
-    e.preventDefault(); // stop page reload
-
-    // Normally you'd send data to backend here with fetch()
-    // For demo, just show success message
+    e.preventDefault();
     successMsg.classList.remove("hidden");
 
-    // Reset form
+  
     contactForm.reset();
   });
 });
+
