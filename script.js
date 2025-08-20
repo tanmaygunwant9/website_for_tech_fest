@@ -2,7 +2,6 @@ let isLoading = true;
 let currentTheme = localStorage.getItem('theme') || 'light';
 let hasAnimatedStats = false;
 
-// DOM Elements
 const loadingScreen = document.getElementById('loading-screen');
 const navbar = document.getElementById('navbar');
 const hamburger = document.getElementById('hamburger');
@@ -72,7 +71,6 @@ function toggleNotifications() {
     notificationContainer.innerHTML = notifications.map(msg => `<div class="notification-item">${msg}</div>`).join('');
     notificationContainer.classList.remove('hidden');
   } else {
-    // Hide notifications
     notificationContainer.classList.add('hidden');
   }
 }
@@ -83,7 +81,6 @@ if (notificationBell) {
     toggleNotifications();
   });
 
-  // Close notifications when clicking outside
   document.addEventListener('click', (e) => {
     if (!notificationContainer.contains(e.target) && !notificationBell.contains(e.target)) {
       notificationContainer.classList.add('hidden');
@@ -122,7 +119,6 @@ function closeMobileMenu() {
 function handleNavigation(e) {
   const target = e.target.getAttribute('href');
 
-  // Allow normal navigation if it's a link to another page
   if (target && target.endsWith('.html')) return;
 
   e.preventDefault();
@@ -148,7 +144,6 @@ function handleNavigation(e) {
   createRippleEffect(e);
 }
 
-// Add this new function in the same file:
 function showServicesSection() {
   const servicesSection = document.getElementById('services');
   if (!servicesSection) return;
@@ -500,14 +495,12 @@ document.addEventListener('DOMContentLoaded', function() {
     notificationContainer.classList.toggle('hidden');
   });
 
-  // Optional: Hide dropdown when clicking outside
   document.addEventListener('click', function(e) {
     if (!bell.contains(e.target) && !notificationContainer.contains(e.target)) {
       notificationContainer.classList.add('hidden');
     }
   });
 
-  // Profile window logic
   const profileIcon = document.querySelector('.profile-avatar');
   const profileWindow = document.getElementById('profile-window');
   const closeProfileBtn = document.getElementById('close-profile-btn');
@@ -520,7 +513,6 @@ document.addEventListener('DOMContentLoaded', function() {
     profileWindow.classList.add('hidden');
   });
 
-  // Optional: Close when clicking outside
   document.addEventListener('click', function(e) {
     if (
       !profileWindow.contains(e.target) &&
@@ -531,7 +523,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Load profile info from localStorage
   const profile = JSON.parse(localStorage.getItem('profile'));
   if (profile) {
     document.getElementById('profile-name').textContent = profile.name || '';
@@ -545,7 +536,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('profile-joined').textContent = localStorage.getItem('profileJoined') || '';
   }
 
-  // Search functionality
   const searchInput = document.querySelector('.search-input');
   const navContainer = document.querySelector('.nav-container');
   let searchMsg = document.getElementById('search-msg');
@@ -597,7 +587,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Contact Us button
   const contactBtn = document.getElementById('contact-us-btn');
   if (contactBtn) {
     contactBtn.onclick = function() {
@@ -605,7 +594,6 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   }
 
-  // View Portfolio button
   const portfolioBtn = document.getElementById('view-portfolio-btn');
   if (portfolioBtn) {
     portfolioBtn.onclick = function() {
@@ -613,3 +601,4 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   }
 });
+
