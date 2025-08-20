@@ -48,7 +48,7 @@ section {
   min-height: 120px;
 }
 
-/* Add to getstarted.css */
+
 .products-section h2 {
   color: #2563eb;
   margin-bottom: 12px;
@@ -119,7 +119,7 @@ section {
   padding-left: 18px;
 }
 
-/* Responsive */
+
 @media (max-width: 600px) {
   .getstarted-main {
     margin: 16px auto;
@@ -134,4 +134,5 @@ section {
     padding: 8px 14px;
     font-size: 0.95rem;
   }
+
 }
