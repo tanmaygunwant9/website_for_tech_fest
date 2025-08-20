@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (valid) {
       
-      window.location.href = 'main.html';
+      window.location.href = 'index.html';
     }
   });
 
@@ -147,3 +147,4 @@ window.onload = function() {
   
   updateProgress();
 };
+
